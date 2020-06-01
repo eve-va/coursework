@@ -1,7 +1,9 @@
+'use strict';
+
 const movieScore = document.querySelector('.js-movie'),
-      musicScore = document.querySelector('.js-music'),
-      quoteScore = document.querySelector('.js-quote'),
-      sumScore = document.querySelector('.js-sum');
+  musicScore = document.querySelector('.js-music'),
+  quoteScore = document.querySelector('.js-quote'),
+  sumScore = document.querySelector('.js-sum');
 
 let scores = location.href.split('?')[1];
 scores = scores.split('&').map(x => +x.split('=')[1]);
