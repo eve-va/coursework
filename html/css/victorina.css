@@ -1,0 +1,45 @@
+img {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: 400px;
+}
+.variants {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 20px;
+}
+.variants__ans {
+    color: #ffffff;
+    box-sizing: border-box;
+}
+.variants__ans > input {
+    display: none;
+}
+.variants__ans > label {
+    display: block;
+    padding: 7px 10px;
+    letter-spacing: 3px;
+    font: 100 14px Philosopher, serif;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+.variants__ans > label:hover {
+    box-shadow: 0 0 5px #ffffff;
+}
+.variants__ans > input:checked + label {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    box-shadow: none;
+    cursor: default;
+}
+.variants__ans-correct > label,
+.variants__ans-correct > input:checked + label {
+    border-color: #00ff00;
+    background-color: #00ff00;
+    box-shadow: none;
+    cursor: default;
+}
