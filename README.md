@@ -1,4 +1,4 @@
-# coursework
+# Coursework
 
 ***Quiz about movies***
 ===
