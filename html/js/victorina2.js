@@ -43,6 +43,4 @@ const layout = new LayoutContent([
     correct: 3, value: 5 }
 ], '.js-content', 'variants__ans-correct');
 
-layout.init('audio', function(score) {
-  return 'page5.html?movie=' + location.href.split('score=')[1] + '&music=' + score;
-});
+layout.init('audio', score => 'page5.html?movie=' + location.href.split('score=')[1] + '&music=' + score);

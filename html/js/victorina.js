@@ -66,6 +66,4 @@ const layout = new LayoutContent([
     correct: 2, value: 4 }
 ], '.js-content', 'variants__ans-correct');
 
-layout.init('movie', function(score) {
-  return 'page4.html?score=' + score;
-});
+layout.init('movie', score => 'page4.html?score=' + score);

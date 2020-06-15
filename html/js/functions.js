@@ -11,7 +11,8 @@ class LayoutContent {
   }
   init(contentType = 'movie', f) {
     this.content.innerHTML = '';
-    this.content.appendChild(createLayout(contentType, this.curLayout.audio, this.curLayout.src, this.curLayout.arr, this.curLayout.correct, this.curLayout.value));
+    this.content.appendChild(createLayout(contentType, this.curLayout.audio, this.curLayout.src,
+      this.curLayout.arr, this.curLayout.correct, this.curLayout.value));
     this.content.addEventListener('click', e => {
       if (e.target.classList.contains('js-variant')) {
         const container = e.target.parentNode.parentNode;
@@ -29,7 +30,8 @@ class LayoutContent {
             location.href = f(this.score);
           } else {
             this.content.innerHTML = '';
-            this.content.appendChild(createLayout(contentType, this.curLayout.audio, this.curLayout.src, this.curLayout.arr, this.curLayout.correct, this.curLayout.value));
+            this.content.appendChild(createLayout(contentType, this.curLayout.audio,
+              this.curLayout.src, this.curLayout.arr, this.curLayout.correct, this.curLayout.value));
           }
         }, this.intervalLayoutMS);
       }
@@ -46,7 +48,7 @@ function createLayout(type = 'movie', audio = null, src, arr, correct, value) {
   let ans, temp;
 
   if (type === 'movie') img.setAttribute('alt', 'movie frame');
-  else song.setAttribute('controls', 'controls');
+  else img.setAttribute('alt', 'picture');
   img.setAttribute('src', src);
 
   if (type === 'audio') {

@@ -43,7 +43,7 @@ const layout = new LayoutContent([
     correct: 3, value: 5 }
 ], '.js-content', 'variants__ans-correct');
 
-layout.init('audio', function(score) {
+layout.init('audio', score => {
   const arrUrl = location.href.split('?')[1].split('&');
   return 'results.html?'  + arrUrl[0] + '&' + arrUrl[1] + '&quote=' + score;
 });
