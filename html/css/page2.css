@@ -1,0 +1,52 @@
+.content {
+    transform: translate(-20%, -50%);
+}
+.title-page {
+    position: relative;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 60px;
+}
+.title-page:before {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    width: 10px;
+    height: 140%;
+    background-color: #ff0000;
+}
+.title-secondary {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ff0000;
+    font-weight: 100;
+    font-size: 60px;
+    text-shadow: #ec1515 0 0 40px;
+    transform: translate(-175%, -87%) rotate(90deg);
+}
+.btn-start {
+    margin: 40px auto 0;
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    font-size: 15px;
+    font-family: Philosopher, serif;
+    outline: none;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    color: #ff0000;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-start:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+}

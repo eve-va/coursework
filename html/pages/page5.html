@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсовая</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/page3.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <h1 class="title-page">Раунд №3</h1>   
+            <h1 class="title-page2">цитаты</h1>
+            <h2 class="title-secondary">10 цитат, 20 баллов</h2>
+            <h2 class="info">4 легких вопроса по 1 баллу, 4 вопроса посложнее по 2 балла<br />1 вопрос с подвохом на 3 балла, 1 хардкорный вопрос на 5 баллов</h2>
+            <h2 class="task">Задача:</h2>
+            <h2 class="task2">угадай фильм по цитате из него</h2>
+            <a class="btn-start js-start">1 вопрос</a>
+        </div>
+    </div>
+    <script>
+        const link = document.querySelector('.js-start');
+        link.setAttribute('href', 'victorina3.html?' + location.href.split('?')[1].split('&')[0] +'&'+ location.href.split('?')[1].split('&')[1]);
+    </script>
+
+</body>
+</html>
