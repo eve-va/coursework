@@ -3,7 +3,8 @@
 const layout = new LayoutContent([
   { audio: '../audio/Friends.mp3',
     src: '../audio/1.webp',
-    arr: ['Как я встретил вашу маму', 'Офис', 'Друзья', 'Секс в большом городе'],
+    arr: ['Как я встретил вашу маму', 'Офис',
+      'Друзья', 'Секс в большом городе'],
     correct: 2, value: 1 },
   { audio: '../audio/Sherlock.mp3',
     src: '../audio/2.jpg',
@@ -15,7 +16,8 @@ const layout = new LayoutContent([
     correct: 1, value: 1 },
   { audio: '../audio/Irony.mp3',
     src: '../audio/4.jpg',
-    arr: ['Девчата', 'Москва слезам не верит', 'Ирония судьбы', 'Карнавальная ночь'],
+    arr: ['Девчата', 'Москва слезам не верит',
+      'Ирония судьбы', 'Карнавальная ночь'],
     correct: 2, value: 1 },
   { audio: '../audio/Euphoria.mp3',
     src: '../audio/5.jpg',
@@ -31,11 +33,13 @@ const layout = new LayoutContent([
     correct: 0, value: 2 },
   { audio: '../audio/Gatsby.mp3',
     src: '../audio/8.jpg',
-    arr: ['Большие надежды', 'Дневник памяти', 'Великий Гэтсби', 'Далласский клуб покупателей'],
+    arr: ['Большие надежды', 'Дневник памяти',
+      'Великий Гэтсби', 'Далласский клуб покупателей'],
     correct: 2, value: 2 },
   { audio: '../audio/Bond.mp3',
     src: '../audio/9.jpg',
-    arr: ['Квант милосердия', '007: Координаты "Скайфолл"', 'Не время умирать', '007: Спектр'],
+    arr: ['Квант милосердия', '007: Координаты "Скайфолл"',
+      'Не время умирать', '007: Спектр'],
     correct: 2, value: 3 },
   { audio: '../audio/Amelie.mp3',
     src: '../audio/10.jpg',
@@ -43,4 +47,5 @@ const layout = new LayoutContent([
     correct: 3, value: 5 }
 ], '.js-content', 'variants__ans-correct');
 
-layout.init('audio', score => 'page5.html?movie=' + location.href.split('score=')[1] + '&music=' + score);
+layout.init('audio', score => 'page5.html?movie=' +
+ location.href.split('score=')[1] + '&music=' + score);
