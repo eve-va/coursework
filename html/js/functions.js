@@ -9,13 +9,20 @@ class LayoutContent {
     this.cssCorrectClass = correctClass;
     this.intervalLayoutMS = intervalLayoutMS;
   }
+
   init(contentType = 'movie', f) {
     this.content.innerHTML = '';
-    this.content.appendChild(createLayout(contentType, this.curLayout.audio, this.curLayout.src,
-      this.curLayout.arr, this.curLayout.correct, this.curLayout.value));
+
+
+    this.content.appendChild(createLayout(contentType, this.curLayout.audio,
+      this.curLayout.src, this.curLayout.arr,
+      this.curLayout.correct, this.curLayout.value));
+
+
     this.content.addEventListener('click', e => {
       if (e.target.classList.contains('js-variant')) {
         const container = e.target.parentNode.parentNode;
+
         if (e.target.getAttribute('data-correct')) {
           this.score += parseInt(container.getAttribute('data-value'));
           e.target.parentNode.classList.add(this.cssCorrectClass);
@@ -23,6 +30,7 @@ class LayoutContent {
           const labelCorrect = container.querySelector('label[data-correct]');
           labelCorrect.parentNode.classList.add(this.cssCorrectClass);
         }
+
         setTimeout(() => {
           this.curLayout = this.arr[++this.current];
 
@@ -30,25 +38,31 @@ class LayoutContent {
             location.href = f(this.score);
           } else {
             this.content.innerHTML = '';
-            this.content.appendChild(createLayout(contentType, this.curLayout.audio,
-              this.curLayout.src, this.curLayout.arr, this.curLayout.correct, this.curLayout.value));
+            this.content.appendChild(createLayout(contentType,
+              this.curLayout.audio, this.curLayout.src, this.curLayout.arr,
+              this.curLayout.correct, this.curLayout.value));
           }
         }, this.intervalLayoutMS);
+
       }
     });
   }
 }
+
+
 function createLayout(type = 'movie', audio = null, src, arr, correct, value) {
-  const wr = document.createElement('div'),
-    img = document.createElement('img'),
-    variants = document.createElement('div'),
+  const wr = document.createElement('div');
+  const img = document.createElement('img');
+  const variants = document.createElement('div');
 
-    song = document.createElement('audio'),
-    songSource = document.createElement('source');
-  let ans, temp;
+  const song = document.createElement('audio');
+  const songSource = document.createElement('source');
+  let ans;
+  let temp;
 
-  if (type === 'movie') img.setAttribute('alt', 'movie frame');
-  else img.setAttribute('alt', 'picture');
+  (type === 'movie') ?
+    img.setAttribute('alt', 'movie frame') :
+    img.setAttribute('alt', 'picture');
   img.setAttribute('src', src);
 
   if (type === 'audio') {
