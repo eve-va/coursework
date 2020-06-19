@@ -60,9 +60,8 @@ function createLayout(type = 'movie', audio = null, src, arr, correct, value) {
   let ans;
   let temp;
 
-  (type === 'movie') ?
-    img.setAttribute('alt', 'movie frame') :
-    img.setAttribute('alt', 'picture');
+  const description = (type === 'movie') ? 'movie frame' : 'picture';
+  img.setAttribute('alt', description);
   img.setAttribute('src', src);
 
   if (type === 'audio') {
